@@ -1,0 +1,128 @@
+:root {
+    --primary: #00ff88;
+    --bg: #0a0a0a;
+    --card-bg: #1a1a1a;
+    --text: #e0e0e0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.header-superior {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(180deg, #111, var(--bg));
+}
+
+/* --- CUBO 3D --- */
+.container-cubo {
+    width: 100px;
+    height: 100px;
+    perspective: 600px;
+    margin: 40px auto;
+}
+
+.cubo {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: girarCubo 8s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 255, 136, 0.2);
+    border: 2px solid var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.frente  { transform: translateZ(50px); }
+.tras    { transform: rotateY(180deg) translateZ(50px); }
+.direita { transform: rotateY(90deg) translateZ(50px); }
+.esquerda{ transform: rotateY(-90deg) translateZ(50px); }
+.topo    { transform: rotateX(90deg) translateZ(50px); }
+.baixo   { transform: rotateX(-90deg) translateZ(50px); }
+
+@keyframes girarCubo {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+/* --- MENU --- */
+.menu-meio {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--card-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+button {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* --- PÁGINAS --- */
+.pagina {
+    display: none;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+}
+
+.pagina.ativa { display: block; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.experimento {
+    background: var(--card-bg);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary);
+}
+
+.experimento img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-baixo {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.8rem;
+    color: #666;
+}

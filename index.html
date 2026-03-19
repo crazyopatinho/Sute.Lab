@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sute. Lab | Meus Experimentos</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header class="header-superior">
+        <h1>Bem Vindo ao meu laboratório de experimentos 🤓</h1>
+        <div class="container-cubo">
+            <div class="cubo" id="cubo3D">
+                <div class="face frente">S.U.T.E</div>
+                <div class="face tras">LAB</div>
+                <div class="face direita">BIOLOGIA</div>
+                <div class="face esquerda">CIÊNCIA</div>
+                <div class="face topo">ISLLAN</div>
+                <div class="face baixo">ENGINE</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu-meio">
+        <button onclick="mostrarPagina('home')">Home</button>
+        <button onclick="mostrarPagina('fungos')">Fungos</button>
+        <button onclick="mostrarPagina('plantas')">Plantas</button>
+    </nav>
+
+    <main id="conteudo-principal">
+        <section id="home" class="pagina ativa">
+            <div class="card">
+                <h2>Sobre o Criador</h2>
+                <p><strong>Criador:</strong> Isllan (ou batata burra)</p>
+                <p><strong>Descrição:</strong> Site onde eu compartilho meus experimentos para o mundo.</p>
+                <p><strong>Meta:</strong> Fazer o site chegar em pessoas próximas.</p>
+            </div>
+        </section>
+
+        <section id="fungos" class="pagina">
+            <h2>Laboratório de Micologia</h2>
+            
+            <div class="experimento">
+                <img src="imagens/fungo_saccharomyces.jpg" alt="Fungo Saccharomyces">
+                <h3>Saccharomyces (Fermento Biológico)</h3>
+                <p><strong>Sobre:</strong> Este meu fungo é o Saccharomyces, ele é o fungo responsável por fazer a massa de pão ou pizza aumentarem o famoso Fermento biológico. eu cultivo ele há dez dias e do dia 7 para cá ele está evoluindo bastante...</p>
+                <p><strong>Como funciona?:</strong> Esse fungo faz dois processos: fermentação ou natural. O natural é o processo onde o Oxigênio circula melhor... já a Fermentação acontece quando não há oxigênio, produzindo Álcool ou CO2(O que faz a massa expandir).</p>
+            </div>
+
+            <div class="experimento">
+                <img src="imagens/bolor.jpg" alt="Colônias de Bolor">
+                <h3>Colônias de Bolores</h3>
+                <p><strong>Sobre:</strong> Esse meu bolor não é só um bolor... são vários! Existe várias colônias de bolores nesse potinho. Eu não sei quais são então não posso falar aqui para não dar informações erradas.</p>
+                <p><strong>Como funciona?:</strong> Esses fungos são decompositores. Eles têm hifas que juntas viram Micélio. O bolor libera uma substância que transforma a comida em um caldo e se alimenta dele.</p>
+            </div>
+        </section>
+
+        <section id="plantas" class="pagina">
+            <h2>Laboratório de Botânica</h2>
+
+            <div class="experimento">
+                <img src="imagens/manga.jpg" alt="Muda de Manga">
+                <h3>Manga (Mangifera indica)</h3>
+                <p><strong>Sobre:</strong> Minha muda é forte! Usei a técnica SGS (Sistema Germinador de Sementes) que eu criei. É uma técnica complexa(nem tanto assim kk).</p>
+                <p><strong>Como funciona?:</strong> Cientificamente é uma Drupa. Tem o Exocarpo (casca com cera), Mesocarpo (polpa com frutose) e Endocarpo (caroço fibroso). Possui Licopeno e Vitamina C(E também possui vitamina A!).</p>
+            </div>
+
+            <div class="experimento">
+                <img src="imagens/tomate.jpg" alt="Tomateiro">
+                <h3>Tomate (Solanum Lycopersicum)</h3>
+                <p><strong>Sobre:</strong> Achei esse tomate nascendo em um lugar com pouco espaço e adubo. Eu o mudei e ele continuou firme!</p>
+                <p><strong>Como funciona?:</strong> É uma fruta (baga). Tem pericarpo, placenta e loculados. Contém Licopeno que protege contra raios UV e dá a cor vermelha.</p>
+            </div>
+
+            <div class="experimento">
+                <img src="imagens/mamao.jpg" alt="Muda de Mamão">
+                <h3>Mamão (Carica papaya)</h3>
+                <p><strong>Sobre:</strong> Mudinhas pequenas que plantei. Demorou para germinar, mas agora estão crescendo.</p>
+                <p><strong>Como funciona?:</strong> É uma erva gigante (não tem madeira). É uma baga com Papaína, uma enzima que quebra proteínas. O leite branco (látex) é carregado dessa substância(a Papaína).</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-baixo">
+        <p>&copy; 2024 Sute. Lab - Tecnologia e Biologia</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
